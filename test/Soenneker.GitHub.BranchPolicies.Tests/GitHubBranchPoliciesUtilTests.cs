@@ -1,9 +1,6 @@
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Soenneker.GitHub.BranchPolicies.Abstract;
 using Soenneker.Tests.FixturedUnit;
 using Xunit;
-
 
 namespace Soenneker.GitHub.BranchPolicies.Tests;
 
@@ -15,5 +12,11 @@ public class GitHubBranchPoliciesUtilTests : FixturedUnitTest
     public GitHubBranchPoliciesUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
     {
         _util = Resolve<IGitHubBranchPoliciesUtil>(true);
+    }
+
+    [Fact]
+    public void Default()
+    {
+
     }
 }
