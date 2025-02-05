@@ -15,8 +15,8 @@ public static class GitHubBranchPoliciesUtilRegistrar
     /// </summary>
     public static IServiceCollection AddGitHubBranchPoliciesUtilAsSingleton(this IServiceCollection services)
     {
-        services.AddGitHubClientUtilAsSingleton();
-        services.TryAddSingleton<IGitHubBranchPoliciesUtil, GitHubBranchPoliciesUtil>();
+        services.AddGitHubClientUtilAsSingleton()
+                .TryAddSingleton<IGitHubBranchPoliciesUtil, GitHubBranchPoliciesUtil>();
 
         return services;
     }
@@ -26,8 +26,8 @@ public static class GitHubBranchPoliciesUtilRegistrar
     /// </summary>
     public static IServiceCollection AddGitHubBranchPoliciesUtilAsScoped(this IServiceCollection services)
     {
-        services.AddGitHubClientUtilAsSingleton();
-        services.TryAddScoped<IGitHubBranchPoliciesUtil, GitHubBranchPoliciesUtil>();
+        services.AddGitHubClientUtilAsSingleton()
+                .TryAddScoped<IGitHubBranchPoliciesUtil, GitHubBranchPoliciesUtil>();
 
         return services;
     }
