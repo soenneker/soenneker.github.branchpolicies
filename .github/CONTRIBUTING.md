@@ -1,4 +1,4 @@
-# Contributing to Soenneker.GitHub.BranchPolicies
+﻿# Contributing to Soenneker.GitHub.BranchPolicies
 
 We're excited that you're interested in contributing!
 
