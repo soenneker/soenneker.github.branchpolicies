@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.GitHub.BranchPolicies.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.GitHub.BranchPolicies\Soenneker.GitHub.BranchPolicies.csproj" />
     </ItemGroup>
 
     <ItemGroup>
