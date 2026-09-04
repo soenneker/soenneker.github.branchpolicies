@@ -12,6 +12,7 @@ using Soenneker.GitHub.Client.Abstract;
 
 namespace Soenneker.GitHub.BranchPolicies;
 
+/// <inheritdoc cref="IGitHubBranchPoliciesUtil" />
 public sealed class GitHubBranchPoliciesUtil : IGitHubBranchPoliciesUtil
 {
     private readonly ILogger<GitHubBranchPoliciesUtil> _logger;
