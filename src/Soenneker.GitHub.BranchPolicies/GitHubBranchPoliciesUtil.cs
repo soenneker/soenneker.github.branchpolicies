@@ -26,7 +26,8 @@ public sealed class GitHubBranchPoliciesUtil : IGitHubBranchPoliciesUtil
 
     public async ValueTask<BranchProtectionSettings?> GetBranchPolicy(string repo, string owner, string branch = "main", CancellationToken cancellationToken = default)
     {
-        _logger.LogDebug("Getting branch policy for repository ({repo}) for branch ({branch}) ...", repo, branch);
+        if (_logger.IsEnabled(LogLevel.Debug))
+            _logger.LogDebug("Getting branch policy for repository ({repo}) for branch ({branch}) ...", repo, branch);
 
         try
         {
@@ -35,7 +36,8 @@ public sealed class GitHubBranchPoliciesUtil : IGitHubBranchPoliciesUtil
         }
         catch (NotFoundException)
         {
-            _logger.LogDebug("Branch protection not found for repository ({repo}) for branch ({branch})", repo, branch);
+            if (_logger.IsEnabled(LogLevel.Debug))
+                _logger.LogDebug("Branch protection not found for repository ({repo}) for branch ({branch})", repo, branch);
             return null;
         }
     }
